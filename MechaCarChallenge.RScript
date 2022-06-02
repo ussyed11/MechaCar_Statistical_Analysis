@@ -8,13 +8,14 @@ head(Car_Data)
 
 
 options(scipen=999)
-
+#Deliverable 1
 #generate multiple linear regression model
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data =Car_Data)
 
 #generate summary statistics
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data =Car_Data)) 
 
+#Deliverable 2
 # import and read in the Suspension_Coil.csv file as a table
 mecha_coil <- read.csv(file='Suspension_Coil.csv',check.names=F,stringsAsFactors = F) 
 
@@ -31,5 +32,20 @@ lot_summary <- mecha_coil  %>% group_by(Manufacturing_Lot) %>% summarize(Mean =m
                                           Median =median(PSI),
                                           Variance =var(PSI),
                                           Std_Dev =sd(PSI),
-                                          Num_Coil=n(), .groups = 'keep')       
+                                          Num_Coil=n(), .groups = 'keep')    
+# Deliverable 3:                                  
+# Use t.test() to determine if the PSI across ALL lots is statistically different from the pop. mean of 1,500 PSI.
+
+t.test(mecha_coil$PSI,mu=1500)
+
+
+# Use t.test() function 3 more times with subset() to determine if PSI for each manufacturing lot is statistically different from the pop. mean of 1,500 PSI
+lot1 <- subset(mecha_coil, Manufacturing_Lot=="Lot1")
+lot2 <- subset(mecha_coil, Manufacturing_Lot=="Lot2")
+lot3 <- subset(mecha_coil, Manufacturing_Lot=="Lot3")
+
+t.test(lot1$PSI,mu=1500)
+t.test(lot2$PSI,mu=1500)
+t.test(lot3$PSI,mu=1500)
+
                                           
