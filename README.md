@@ -63,6 +63,31 @@ However, Lot 3's sample mean 1496.14 is slightly lower than the popuation mean o
 ![Screen Shot 2022-06-01 at 11 46 21 PM](https://user-images.githubusercontent.com/98566486/171550640-0847dc7d-7d66-4b65-bae4-068a0fa108d5.png)
 
 
+## Study Design: MechaCar vs Competition
+
+To run an analysis that helps to design the MechaCar vehicle to perform better on highway fuel efficiency, horse power, and road safety compared to the other marketplace vehicles. To improve the overall fuel efficiency and driving safety of the MechaCar, more data needs to be gathered for all MechaCar manufacturing designs in addition to the current six variables from our current analysis. Additional data could include varying distances of long trips to determine fuel efficiency, as well as fuel efficiency over time, and safety features count. The dataset must include other marketplace competitors' data for comparison.
+
+The data will meet the following metrics:
+
+* All data is to be numerical
+* Data samples will be as large as possible
+* Data samples need to be randomly selected
+* Variance of data needs to be similar
+
+Our null hypothesis and alternative hypothesis are as follow:
+
+Ho: There is no statistical difference between the competition's mpg dataset and MechaCar's mpg dataset.
+
+Ha: The true mean of MechaCar's mpg is greater than the mean of the competitor's mpg.
+
+We would use the t-test to compare our dataset with the competitors'. The t-test has already been used for this current analysis and provided the predictions needed to take the next steps for improvement.
+
+The p-value would be set at 0.05. Data that results in a prediction of a p-value smaller than 0.05 would provide predictive evidence that the null hypothesis could be rejected and state that the alternative hypothesis is true. Providing evidence that the Ha is true would also predict that the MechaCar provides consistently better fuel efficiency when compared to the competitors' mpg. There is always room for error and better fuel efficiency may not happen all of the time(due to weather conditions), but at least 95% of the time.
+
+
+
+
+
 
 
 
